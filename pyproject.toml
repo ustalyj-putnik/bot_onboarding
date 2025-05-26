@@ -1,0 +1,49 @@
+[project]
+name = "bot-onboarding"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Nikita Novikov"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+packages = [
+    { include = "bot_app", from = "." },
+    { include = "core", from = "." },
+    { include = "scripts", from = "." }
+]
+dependencies = [
+    "aiogram (>=2.25.0,<3.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "sqlalchemy[asyncio] (>=2.0.40,<3.0.0)",
+    "alembic (>=1.15.2,<2.0.0)",
+    "pydantic (>=2.11.4,<3.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "qdrant-client (>=1.14.2,<2.0.0)",
+    "sentence-transformers (>=4.1.0,<5.0.0)",
+    "typer (>=0.15.3,<0.16.0)",
+    "loguru (>=0.7.3,<0.8.0)",
+    "pydantic-settings (>=2.9.1,<3.0.0)",
+    "asyncpg (>=0.30.0,<0.31.0)",
+    "bs4 (>=0.0.2,<0.0.3)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "lxml (>=5.4.0,<6.0.0)",
+    "pyarrow (>=20.0.0,<21.0.0)",
+    "fastparquet (>=2024.11.0,<2025.0.0)",
+    "llama-cpp-python (>=0.3.9,<0.4.0)",
+    "prometheus-client (>=0.21.1,<0.22.0)",
+]
+
+[tool.poetry]
+#package-mode = false
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+mypy = "^1.15.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+pytest-asyncio = "^0.26.0"
+pytest-dotenv = "^0.5.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
